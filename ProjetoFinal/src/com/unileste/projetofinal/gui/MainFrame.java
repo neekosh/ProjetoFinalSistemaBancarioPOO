@@ -1,22 +1,15 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package com.unileste.projetofinal.gui;
-
-/**
- *
- * @author geova
- */
 public class MainFrame extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(MainFrame.class.getName());
 
-    /**
-     * Creates new form MainFrame
-     */
+    
     public MainFrame() {
         initComponents();
+        
+        jTabbedPaneAbas.addTab("Clientes", new ClientePanel());
+        jTabbedPaneAbas.addTab("Contas", new ContaPanel());
+        jTabbedPaneAbas.addTab("Operações", new OperacoesPanel()); 
     }
 
     /**
@@ -28,20 +21,36 @@ public class MainFrame extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jLabel4 = new javax.swing.JLabel();
+        jTabbedPaneAbas = new javax.swing.JTabbedPane();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jLabel4.setText("Sistema Bancário");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(236, 236, 236)
+                .addComponent(jLabel4)
+                .addContainerGap(244, Short.MAX_VALUE))
+            .addComponent(jTabbedPaneAbas)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jTabbedPaneAbas, javax.swing.GroupLayout.DEFAULT_SIZE, 446, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     /**
@@ -67,8 +76,15 @@ public class MainFrame extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> new MainFrame().setVisible(true));
+        
+        
+        
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTabbedPane jTabbedPaneAbas;
     // End of variables declaration//GEN-END:variables
 }

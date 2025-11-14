@@ -1,13 +1,5 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
-package com.unileste.projetofinal.gui;
 
-/**
- *
- * @author geova
- */
+package com.unileste.projetofinal.gui;
 public class ContaPanel extends javax.swing.JPanel {
 
     /**
@@ -26,19 +18,188 @@ public class ContaPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTituloConta = new javax.swing.JLabel();
+        jTituloNumeroConta = new javax.swing.JLabel();
+        jTituloTipoConta = new javax.swing.JLabel();
+        jTituloSaldo = new javax.swing.JLabel();
+        jTituloCPFCliente = new javax.swing.JLabel();
+        jComboBoxTipoDeConta = new javax.swing.JComboBox<>();
+        jTextField1 = new javax.swing.JTextField();
+        jTxtSaldo = new javax.swing.JTextField();
+        jTxtCPFdoCliente = new javax.swing.JTextField();
+        jButtonCriarConta = new javax.swing.JButton();
+        jButtonBuscarConta = new javax.swing.JButton();
+        jButtonExcluirConta = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTabelaDeContasCadastradas = new javax.swing.JTable();
+        jTituloDaTabelaDeContasCadastradas = new javax.swing.JLabel();
+
+        jTituloConta.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTituloConta.setText("Conta");
+
+        jTituloNumeroConta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloNumeroConta.setText("Número da conta: ");
+
+        jTituloTipoConta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloTipoConta.setText("Tipo de conta:");
+
+        jTituloSaldo.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloSaldo.setText("Saldo:");
+
+        jTituloCPFCliente.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloCPFCliente.setText("CPF cliente:");
+
+        jComboBoxTipoDeConta.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Conta Corrente", "Conta Poupança" }));
+        jComboBoxTipoDeConta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxTipoDeContaActionPerformed(evt);
+            }
+        });
+
+        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField1ActionPerformed(evt);
+            }
+        });
+
+        jButtonCriarConta.setText("Criar Conta");
+
+        jButtonBuscarConta.setText("Buscar Conta");
+
+        jButtonExcluirConta.setText("Excluir");
+
+        jTabelaDeContasCadastradas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Conta 1", "Conta 2", "Conta  3"
+            }
+        ));
+        jScrollPane2.setViewportView(jTabelaDeContasCadastradas);
+
+        jTituloDaTabelaDeContasCadastradas.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloDaTabelaDeContasCadastradas.setText("Tabela de contas cadastradas:");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(272, 272, 272)
+                .addComponent(jButtonBuscarConta)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 131, Short.MAX_VALUE)
+                .addComponent(jButtonExcluirConta)
+                .addGap(45, 45, 45))
+            .addComponent(jScrollPane2)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(35, 35, 35)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jTituloCPFCliente)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTituloNumeroConta)
+                                    .addComponent(jTituloSaldo)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                        .addComponent(jButtonCriarConta)
+                                        .addComponent(jTituloTipoConta)))
+                                .addGap(98, 98, 98)
+                                .addComponent(jComboBoxTipoDeConta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 235, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(225, 225, 225)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTxtSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTxtCPFdoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 191, Short.MAX_VALUE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(286, 286, 286)
+                        .addComponent(jTituloConta))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(209, 209, 209)
+                        .addComponent(jTituloDaTabelaDeContasCadastradas)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jTituloConta)
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloNumeroConta)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(34, 34, 34)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloTipoConta)
+                    .addComponent(jComboBoxTipoDeConta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(32, 32, 32)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTxtSaldo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTituloSaldo))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(34, 34, 34)
+                        .addComponent(jTituloCPFCliente)
+                        .addGap(28, 28, 28))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTxtCPFdoCliente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonExcluirConta)
+                    .addComponent(jButtonBuscarConta)
+                    .addComponent(jButtonCriarConta))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jTituloDaTabelaDeContasCadastradas)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 404, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jComboBoxTipoDeContaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxTipoDeContaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxTipoDeContaActionPerformed
+
+    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButtonBuscarConta;
+    private javax.swing.JButton jButtonCriarConta;
+    private javax.swing.JButton jButtonExcluirConta;
+    private javax.swing.JComboBox<String> jComboBoxTipoDeConta;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTabelaDeContasCadastradas;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JLabel jTituloCPFCliente;
+    private javax.swing.JLabel jTituloConta;
+    private javax.swing.JLabel jTituloDaTabelaDeContasCadastradas;
+    private javax.swing.JLabel jTituloNumeroConta;
+    private javax.swing.JLabel jTituloSaldo;
+    private javax.swing.JLabel jTituloTipoConta;
+    private javax.swing.JTextField jTxtCPFdoCliente;
+    private javax.swing.JTextField jTxtSaldo;
     // End of variables declaration//GEN-END:variables
 }

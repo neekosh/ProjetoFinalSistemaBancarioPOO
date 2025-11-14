@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package com.unileste.projetofinal.gui;
 
 /**
@@ -26,19 +22,135 @@ public class OperacoesPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTituloOperacoesBancarias = new javax.swing.JLabel();
+        jTituloNumeroDaConta = new javax.swing.JLabel();
+        jTituloTipoDeOperacao = new javax.swing.JLabel();
+        jTituloValor = new javax.swing.JLabel();
+        JComboBoxTipoDeOperacao = new javax.swing.JComboBox<>();
+        jTxtNumeroDaConta = new javax.swing.JTextField();
+        jTxtValor = new javax.swing.JTextField();
+        jButtonExecutarOperacao = new javax.swing.JButton();
+        jTituloHistoricoDeOperacoes = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTabelaOperacoesBancarias = new javax.swing.JTable();
+
+        jTituloOperacoesBancarias.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTituloOperacoesBancarias.setText("Operações Bancárias");
+
+        jTituloNumeroDaConta.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloNumeroDaConta.setText("Número da conta: ");
+
+        jTituloTipoDeOperacao.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloTipoDeOperacao.setText("Tipo de operação: ");
+
+        jTituloValor.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloValor.setText("Valor: ");
+
+        JComboBoxTipoDeOperacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Saque", "Depósito" }));
+
+        jButtonExecutarOperacao.setText("Executar Operação");
+
+        jTituloHistoricoDeOperacoes.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloHistoricoDeOperacoes.setText("Histórico de Operações:");
+
+        jTabelaOperacoesBancarias.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Operação 1", "Operação 2", "Operação 3"
+            }
+        ));
+        jScrollPane2.setViewportView(jTabelaOperacoesBancarias);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 621, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(24, 24, 24)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jButtonExecutarOperacao)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTituloHistoricoDeOperacoes))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTituloValor)
+                                        .addComponent(jTituloNumeroDaConta)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addComponent(jTituloTipoDeOperacao)
+                                            .addGap(102, 102, 102)
+                                            .addComponent(JComboBoxTipoDeOperacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addGap(0, 0, Short.MAX_VALUE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(195, 195, 195)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jTituloOperacoesBancarias)
+                                    .addComponent(jTxtNumeroDaConta, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jTxtValor, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(jTituloOperacoesBancarias)
+                .addGap(45, 45, 45)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloNumeroDaConta)
+                    .addComponent(jTxtNumeroDaConta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(33, 33, 33)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloTipoDeOperacao)
+                    .addComponent(JComboBoxTipoDeOperacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloValor)
+                    .addComponent(jTxtValor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jTituloHistoricoDeOperacoes)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jButtonExecutarOperacao)
+                        .addGap(31, 31, 31)))
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> JComboBoxTipoDeOperacao;
+    private javax.swing.JButton jButtonExecutarOperacao;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTabelaOperacoesBancarias;
+    private javax.swing.JLabel jTituloHistoricoDeOperacoes;
+    private javax.swing.JLabel jTituloNumeroDaConta;
+    private javax.swing.JLabel jTituloOperacoesBancarias;
+    private javax.swing.JLabel jTituloTipoDeOperacao;
+    private javax.swing.JLabel jTituloValor;
+    private javax.swing.JTextField jTxtNumeroDaConta;
+    private javax.swing.JTextField jTxtValor;
     // End of variables declaration//GEN-END:variables
 }

@@ -1,13 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package com.unileste.projetofinal.gui;
-
-/**
- *
- * @author geova
- */
 public class ClientePanel extends javax.swing.JPanel {
 
     /**
@@ -26,19 +17,101 @@ public class ClientePanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jTituloCadastroDeClientes = new javax.swing.JLabel();
+        jTituloNome = new javax.swing.JLabel();
+        jTituloCPF = new javax.swing.JLabel();
+        jTituloEndereco = new javax.swing.JLabel();
+        jTxtNome = new javax.swing.JTextField();
+        TxtCPF = new javax.swing.JTextField();
+        jTxtEndereco = new javax.swing.JTextField();
+        jButtonSalvar = new javax.swing.JButton();
+
+        jTituloCadastroDeClientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTituloCadastroDeClientes.setText("Cadastro de Clientes");
+
+        jTituloNome.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloNome.setText("Nome:");
+
+        jTituloCPF.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloCPF.setText("CPF:");
+
+        jTituloEndereco.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jTituloEndereco.setText("Endereço:");
+
+        jTxtNome.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTxtNomeActionPerformed(evt);
+            }
+        });
+
+        jButtonSalvar.setText("Salvar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jTituloCadastroDeClientes)
+                .addGap(224, 224, 224))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(56, 56, 56)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(TxtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                .addGroup(layout.createSequentialGroup()
+                                    .addComponent(jTituloEndereco)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(jTxtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(layout.createSequentialGroup()
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jTituloCPF)
+                                        .addComponent(jTituloNome))
+                                    .addGap(77, 77, 77)
+                                    .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(267, 267, 267)
+                        .addComponent(jButtonSalvar)))
+                .addContainerGap(203, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(jTituloCadastroDeClientes)
+                .addGap(43, 43, 43)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloNome)
+                    .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(31, 31, 31)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloCPF)
+                    .addComponent(TxtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jTituloEndereco)
+                    .addComponent(jTxtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(26, 26, 26)
+                .addComponent(jButtonSalvar)
+                .addContainerGap(94, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jTxtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTxtNomeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTxtNomeActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField TxtCPF;
+    private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JLabel jTituloCPF;
+    private javax.swing.JLabel jTituloCadastroDeClientes;
+    private javax.swing.JLabel jTituloEndereco;
+    private javax.swing.JLabel jTituloNome;
+    private javax.swing.JTextField jTxtEndereco;
+    private javax.swing.JTextField jTxtNome;
     // End of variables declaration//GEN-END:variables
 }
