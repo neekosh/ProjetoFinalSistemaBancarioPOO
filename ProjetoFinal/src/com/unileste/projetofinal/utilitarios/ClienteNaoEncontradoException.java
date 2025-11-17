@@ -9,5 +9,7 @@ package com.unileste.projetofinal.utilitarios;
  * @author geova
  */
 public class ClienteNaoEncontradoException {
-    
+    public static void main (String [] args) {
+        
+    }  
 }

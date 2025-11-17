@@ -9,5 +9,8 @@ package com.unileste.projetofinal.utilitarios;
  * @author geova
  */
 public class SaldoInsuficienteException {
-    
+    public static void main (String [] arg) {
+        
+        System.out.println ("Dog");
+    }
 }
