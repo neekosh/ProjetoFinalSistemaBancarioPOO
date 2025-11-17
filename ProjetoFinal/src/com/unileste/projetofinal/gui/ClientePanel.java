@@ -20,11 +20,12 @@ public class ClientePanel extends javax.swing.JPanel {
         jTituloCadastroDeClientes = new javax.swing.JLabel();
         jTituloNome = new javax.swing.JLabel();
         jTituloCPF = new javax.swing.JLabel();
-        jTituloEndereco = new javax.swing.JLabel();
         jTxtNome = new javax.swing.JTextField();
         TxtCPF = new javax.swing.JTextField();
-        jTxtEndereco = new javax.swing.JTextField();
         jButtonSalvar = new javax.swing.JButton();
+        jButtonBuscar = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextAreaResultadoCadClientes = new javax.swing.JTextArea();
 
         jTituloCadastroDeClientes.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTituloCadastroDeClientes.setText("Cadastro de Clientes");
@@ -35,9 +36,6 @@ public class ClientePanel extends javax.swing.JPanel {
         jTituloCPF.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jTituloCPF.setText("CPF:");
 
-        jTituloEndereco.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jTituloEndereco.setText("Endereço:");
-
         jTxtNome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTxtNomeActionPerformed(evt);
@@ -45,43 +43,53 @@ public class ClientePanel extends javax.swing.JPanel {
         });
 
         jButtonSalvar.setText("Salvar");
+        jButtonSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonSalvarActionPerformed(evt);
+            }
+        });
+
+        jButtonBuscar.setText("Buscar");
+
+        jTextAreaResultadoCadClientes.setColumns(20);
+        jTextAreaResultadoCadClientes.setRows(5);
+        jScrollPane1.setViewportView(jTextAreaResultadoCadClientes);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jTituloCadastroDeClientes)
-                .addGap(224, 224, 224))
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(150, 150, 150)
+                        .addComponent(jButtonSalvar)
+                        .addGap(137, 137, 137)
+                        .addComponent(jButtonBuscar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(220, 220, 220)
+                        .addComponent(jTituloCadastroDeClientes))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(56, 56, 56)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(TxtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addComponent(jTituloEndereco)
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTxtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jTituloCPF)
-                                        .addComponent(jTituloNome))
-                                    .addGap(77, 77, 77)
-                                    .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTituloCPF)
+                                    .addComponent(jTituloNome))
+                                .addGap(77, 77, 77)
+                                .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(267, 267, 267)
-                        .addComponent(jButtonSalvar)))
-                .addContainerGap(203, Short.MAX_VALUE))
+                        .addGap(170, 170, 170)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(188, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(24, 24, 24)
                 .addComponent(jTituloCadastroDeClientes)
-                .addGap(43, 43, 43)
+                .addGap(38, 38, 38)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTituloNome)
                     .addComponent(jTxtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -89,13 +97,13 @@ public class ClientePanel extends javax.swing.JPanel {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jTituloCPF)
                     .addComponent(TxtCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTituloEndereco)
-                    .addComponent(jTxtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(26, 26, 26)
-                .addComponent(jButtonSalvar)
-                .addContainerGap(94, Short.MAX_VALUE))
+                    .addComponent(jButtonSalvar)
+                    .addComponent(jButtonBuscar))
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(35, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -103,15 +111,20 @@ public class ClientePanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTxtNomeActionPerformed
 
+    private void jButtonSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalvarActionPerformed
+        
+    }//GEN-LAST:event_jButtonSalvarActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField TxtCPF;
+    private javax.swing.JButton jButtonBuscar;
     private javax.swing.JButton jButtonSalvar;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextAreaResultadoCadClientes;
     private javax.swing.JLabel jTituloCPF;
     private javax.swing.JLabel jTituloCadastroDeClientes;
-    private javax.swing.JLabel jTituloEndereco;
     private javax.swing.JLabel jTituloNome;
-    private javax.swing.JTextField jTxtEndereco;
     private javax.swing.JTextField jTxtNome;
     // End of variables declaration//GEN-END:variables
 }
